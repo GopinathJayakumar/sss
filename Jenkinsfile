@@ -23,25 +23,8 @@ pipeline {
     }
 
     stage('Integration Testing') {
-      parallel {
-        stage('Integration Testing') {
-          steps {
-            echo 'UI Test - Integration'
-          }
-        }
-
-        stage('Api Testing') {
-          steps {
-            echo 'Using REST Call - Automation Testing'
-          }
-        }
-
-        stage('Performance Testing') {
-          steps {
-            echo 'Using Loadrunner / Jmeter Testing'
-          }
-        }
-
+      steps {
+        echo 'UI Test - Integration'
       }
     }
 
